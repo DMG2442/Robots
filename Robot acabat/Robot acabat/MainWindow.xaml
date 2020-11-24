@@ -20,6 +20,7 @@
             <RowDefinition/>
 
         </Grid.RowDefinitions>
+        <Image x:Name="imgRobotAmbBarret" Source="robotMariachi.jpg" Visibility="Hidden"/>
         <Canvas x:Name="cnvCanvas" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"  Background="BlueViolet" />
         <Image x:Name="imgRobot" Source="robot.jpg" Visibility="Hidden"/>
         <Image x:Name="imgTresor" Source="tresor.jpg" Visibility="Hidden"/>

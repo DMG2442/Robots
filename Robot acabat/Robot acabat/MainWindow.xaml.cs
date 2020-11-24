@@ -45,19 +45,22 @@ namespace Robot_acabat
         {
             #region Moviment robot
             grdTauler.Children.Remove(imgRobot);
-
+            grdTauler.Children.Remove(imgRobotAmbBarret);
             imgRobot.Visibility = Visibility.Visible;
+            imgRobotAmbBarret.Visibility = Visibility.Visible;
             Random rnd = new Random();
             int filaRobot = rnd.Next(0, 4);
             int columnaRobot = rnd.Next(0, 4);
-
+            int filaRobotBarret = rnd.Next(0, 4);
+            int columnaRobotBarret = rnd.Next(0, 4);
 
             Grid.SetColumn(imgRobot, columnaRobot);
             Grid.SetRow(imgRobot, filaRobot);
-
+            Grid.SetColumn(imgRobotAmbBarret, columnaRobotBarret);
+            Grid.SetRow(imgRobotAmbBarret, filaRobotBarret);
 
             grdTauler.Children.Add(imgRobot);
-           
+            grdTauler.Children.Add(imgRobotAmbBarret);
             #endregion
 
             if (filaRobot == filaTresor && columnaRobot == columnaTresor)
@@ -65,7 +68,13 @@ namespace Robot_acabat
                 temps.Stop();
                 MessageBox.Show("El robot normal ha trobat el tresor!");
             }
-   
+
+            else if (filaRobotBarret == filaTresor && columnaRobotBarret == columnaTresor)
+            {
+                temps.Stop();
+                MessageBox.Show("El robot amb barret ha trobat el tresor!");
+            }
+
         }
 
         private void ColocaTresor()
