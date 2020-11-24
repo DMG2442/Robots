@@ -21,6 +21,7 @@ namespace Robot_acabat
     /// </summary>
     public partial class MainWindow : Window
     {
+        int nMoviments = 0;
         int filaTresor;
         int columnaTresor;
         DispatcherTimer temps = new DispatcherTimer();
@@ -43,6 +44,10 @@ namespace Robot_acabat
 
         private void Temps_Tick(object sender, EventArgs e)
         {
+
+            nMoviments++;
+            tbNMoviments.Text = "Numero de moviments : " + nMoviments.ToString();
+
             #region Moviment robot
             grdTauler.Children.Remove(imgRobot);
             grdTauler.Children.Remove(imgRobotAmbBarret);

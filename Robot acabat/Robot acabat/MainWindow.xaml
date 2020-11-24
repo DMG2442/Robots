@@ -18,12 +18,12 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Image x:Name="imgRobotAmbBarret" Source="robotMariachi.jpg" Visibility="Hidden"/>
         <Canvas x:Name="cnvCanvas" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="4"  Background="BlueViolet" />
         <Image x:Name="imgRobot" Source="robot.jpg" Visibility="Hidden"/>
         <Image x:Name="imgTresor" Source="tresor.jpg" Visibility="Hidden"/>
-        
+        <TextBlock x:Name="tbNMoviments" Text="Numero de moviments : 0"  Grid.Row="5" Grid.Column="0"  Grid.ColumnSpan="4" FontSize="18"/>
     </Grid>
 </Window>
